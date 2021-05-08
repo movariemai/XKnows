@@ -54,7 +54,7 @@ namespace XKnows.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Share share)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Skill,Level,Points")] Share share)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace XKnows.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Share share)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Skill,Level,Points")] Share share)
         {
             if (id != share.Id)
             {
